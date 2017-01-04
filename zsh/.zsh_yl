@@ -1,0 +1,5 @@
+ZSH_THEME="cloud"
+
+alias ll="ls -la"
+alias s="ssh iad-a1b-s0.blupig.net"
+alias delds="find . -name '.DS_Store' -delete"
