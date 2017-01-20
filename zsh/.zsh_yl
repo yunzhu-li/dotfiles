@@ -1,5 +1,17 @@
 ZSH_THEME="cloud"
 
-alias ll="ls -la"
+alias ll="ls -lah"
 alias s="ssh iad-a1b-s0.blupig.net"
+
+# Mac
 alias delds="find . -name '.DS_Store' -delete"
+
+# Docker
+alias rmc="docker rm -v -f \$(docker ps -aq)"
+alias rmi="docker rmi \$(docker images -q)"
+
+# K8s
+alias k="kubectl"
+alias kp="kubectl get pods"
+alias ks="kubectl get services"
+alias khpa="kubectl get hpa"
