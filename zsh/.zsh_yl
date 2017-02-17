@@ -12,7 +12,9 @@ alias rmi="docker rmi \$(docker images -q)"
 
 # K8s
 alias k="kubectl"
-alias ka="kubectl get nodes,deployments,pods,services,hpa"
+alias ka="kubectl get nodes,deployments,hpa,pods,services,ingress"
 alias kp="kubectl get pods"
 alias ks="kubectl get services"
+alias ki="kubectl get ingress"
 alias ke="kubectl exec -it"
+
