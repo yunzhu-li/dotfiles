@@ -1,14 +1,41 @@
+# General
 ZSH_THEME="cloud"
 
-alias ll="ls -lah"
+# Docker
+eval $(docker-machine env)
+
+# Aliases
+alias ll="ls -lh"
+alias lla="ls -lha"
+alias rc="source ~/.zshrc"
+alias vimrc="vim ~/.zshrc"
+alias vimyl="vim ~/.zsh_yl"
 alias s="ssh iad-a1b-s0.blupig.net"
 
 # Mac
-alias delds="find . -name '.DS_Store' -delete"
+alias dds="find . -name '.DS_Store' -delete"
+
+# Git
+alias g="git"
+alias ga="dds && git add ."
+alias gc="git checkout"
+alias gcm="git commit -m"
+alias gca="git commit --amend"
+alias gcane="git commit --amend --no-edit"
+alias gd="git diff"
+alias gl="git log"
+alias gl1="git log --pretty --oneline"
+alias gm="git merge --ff-only"
+alias gp="git pull"
+alias gs="dds && git status"
+alias gss="git stash"
+alias gsp="git stash pop"
 
 # Docker
 alias rmc="docker rm -v -f \$(docker ps -aq)"
 alias rmi="docker rmi \$(docker images -q)"
+alias dmup="docker-machine start"
+alias dmdown="docker-machine stop"
 
 # K8s
 alias k="kubectl"
