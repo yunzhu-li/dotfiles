@@ -17,7 +17,7 @@ alias dds="find . -name '.DS_Store' -delete"
 
 # Git
 alias g="git"
-alias ga="dds && git add ."
+alias ga="dds && git add . && git status"
 alias gc="git checkout"
 alias gcm="git commit -m"
 alias gca="git commit --amend"
