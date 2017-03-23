@@ -34,6 +34,8 @@ alias grhh1="git reset --hard HEAD~1"
 alias gs="dds && git status"
 alias gss="git stash"
 alias gsp="git stash pop"
+alias grso="git remote show origin"
+alias grpo="git remote prune origin"
 
 # Docker
 alias rmc="docker rm -v -f \$(docker ps -aq)"
