@@ -1,7 +1,9 @@
 # General
+echo "Loading shrc_yl..."
 ZSH_THEME="cloud"
 
 # Docker
+echo "Setting docker-machine environment variables..."
 eval $(docker-machine env)
 
 # Aliases
