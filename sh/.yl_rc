@@ -1,12 +1,15 @@
-# General
-echo "Loading shrc_yl..."
+# -- General --
+echo "Loading yl_rc..."
 ZSH_THEME="cloud"
 
-# Docker
-echo "Setting docker-machine environment variables..."
-eval $(docker-machine env)
+# -- Docker Machine --
+if docker-machine &> /dev/null ; then
+    echo "Setting docker-machine environment variables..."
+    eval $(docker-machine env)
+fi
 
-# Aliases
+# -- Aliases --
+# General
 alias ll="ls -lh"
 alias lla="ls -lha"
 alias rc="source ~/.zshrc"
