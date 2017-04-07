@@ -1,0 +1,24 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Boxy Theme",
+		"CMake",
+		"CMakeBuilder",
+		"Dockerfile Syntax Highlighting",
+		"GitGutter",
+		"Markdown Preview",
+		"nginx",
+		"Package Control",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-cpplint",
+		"SublimeLinter-pep8",
+		"Terraform",
+		"TrailingSpaces"
+	]
+}

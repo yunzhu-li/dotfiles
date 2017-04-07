@@ -14,7 +14,7 @@ alias ll="ls -lh"
 alias lla="ls -lha"
 alias rc="source ~/.zshrc"
 alias vimrc="vim ~/.zshrc"
-alias vimyl="vim ~/.shrc_yl"
+alias vimyl="vim ~/.yl_rc"
 alias s="ssh iad-a1b-s0.blupig.net"
 
 # Mac

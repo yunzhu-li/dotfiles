@@ -13,5 +13,6 @@ install:
 	@echo "Installing Sublime Text settings..."
 	@rm -f "$${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
 	@rm -f "$${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
+	@rm -f "$${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
 	@ln -s "$$(pwd)"/sublime_text/* "$${HOME}/Library/Application Support/Sublime Text 3/Packages/User/"
 
