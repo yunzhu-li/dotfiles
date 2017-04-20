@@ -56,9 +56,16 @@ alias dmdown="docker-machine stop"
 
 # K8s
 alias k="kubectl"
+alias kd="kubectl describe"
+alias kdn="kubectl describe nodes"
+alias ke="kubectl exec -it"
+alias kev="kubectl get events -w"
+alias kg="kubectl get"
+alias ki="kubectl get ingress"
+alias kl="kubectl logs -f"
+alias kn="kubectl get nodes"
 alias ka="kubectl get nodes,deployments,hpa,pods,services,ingress"
 alias kp="kubectl get pods"
+alias kpx="kubectl proxy"
 alias ks="kubectl get services"
-alias ki="kubectl get ingress"
-alias ke="kubectl exec -it"
 
