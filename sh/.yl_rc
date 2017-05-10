@@ -4,7 +4,7 @@ ZSH_THEME="cloud"
 
 # -- Docker Machine --
 if docker-machine &> /dev/null ; then
-    echo "Setting docker-machine environment variables..."
+    echo "Setting up docker-machine environment variables..."
     eval $(docker-machine env)
 fi
 
@@ -55,19 +55,29 @@ alias dmup="docker-machine start"
 alias dmdown="docker-machine stop"
 
 # K8s
+if kubectl &> /dev/null ; then
+    echo "Setting up kubectl autocomplete..."
+    source <(kubectl completion zsh)
+fi
+
 alias k="kubectl"
+alias kccc="kubectl config current-context"
 alias kci="kubectl cluster-info"
 alias kcm="kubectl get configmaps --show-kind"
 alias kd="kubectl describe"
 alias kdep="kubectl get deployments --show-kind"
+alias kdepw="kdep -o=wide"
 alias kdn="kubectl describe nodes --show-kind"
 alias ke="kubectl exec -it"
 alias kew="kubectl get events -w"
 alias kg="kubectl get --show-kind"
 alias kl="kubectl logs -f"
 alias kn="kubectl get nodes --show-kind"
+alias knw="kubectl get nodes --show-kind -o=wide"
 alias ka="kubectl get nodes,deployments,replicasets,horizontalpodautoscalers,services,ingress"
 alias kp="kubectl get pods --show-kind"
+alias kpw="kubectl get pods --show-kind -o=wide"
+alias kpnw="kubectl get pods --show-kind --sort-by='.spec.nodeName' -o=wide"
 alias kpx="kubectl proxy"
 alias krs="kubectl get replicasets --show-kind"
 alias ks="kubectl get services,ingress"
