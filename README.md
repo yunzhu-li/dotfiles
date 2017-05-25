@@ -1,2 +1,8 @@
 # dotfiles
-Settings for unix tools
+
+Settings for *nix tools
+
+To install:
+```
+make install [zsh] [bash] [subl_macos]
+```

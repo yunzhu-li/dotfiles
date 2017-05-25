@@ -1,14 +1,16 @@
 all:
 	@echo "WARNING: This will replace current configuration files."
-	@echo "To install: make install [{zsh, bash}] [subl_macos]"
+	@echo "To install: make install [zsh] [bash] [subl_macos]"
 
 install:
-	@echo "Linking dotfiles..."
+	@echo "Removing existing files..."
 	@rm -f "$${HOME}/.vimrc"
-	@ln -s "$$(pwd)/vim/.vimrc" "$${HOME}"
 	@rm -f "$${HOME}/.yl_rc"
-	@ln -s "$$(pwd)/sh/.yl_rc" "$${HOME}"
 	@rm -f "$${HOME}/.hyper.js"
+
+	@echo "Linking dotfiles..."
+	@ln -s "$$(pwd)/vim/.vimrc" "$${HOME}"
+	@ln -s "$$(pwd)/sh/.yl_rc" "$${HOME}"
 	@ln -s "$$(pwd)/hyper/.hyper.js" "$${HOME}"
 
 subl_macos:
@@ -21,9 +23,9 @@ subl_macos:
 
 zsh:
 	@echo "Installing for zsh..."
+	@echo "Remove git plugin from ~/.zshrc !"
 	@grep -q -F 'source ~/.yl_rc' ~/.zshrc || echo 'source ~/.yl_rc' >> "$${HOME}/.zshrc"
 
 bash:
 	@echo "Installing for bash..."
 	@grep -q -F 'source ~/.yl_rc' ~/.bashrc || echo 'source ~/.yl_rc' >> "$${HOME}/.bashrc"
-
