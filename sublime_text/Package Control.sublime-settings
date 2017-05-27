@@ -10,6 +10,7 @@
 		"CMakeBuilder",
 		"Dockerfile Syntax Highlighting",
 		"GitGutter",
+		"INI",
 		"Markdown Preview",
 		"nginx",
 		"Package Control",
@@ -18,6 +19,7 @@
 		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-cpplint",
 		"SublimeLinter-pep8",
+		"Swift",
 		"Terraform",
 		"TrailingSpaces"
 	]
