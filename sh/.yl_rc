@@ -1,6 +1,7 @@
 # -- General --
 echo "Loading yl_rc..."
 ZSH_THEME="cloud"
+export GPG_TTY=$(tty)
 
 # -- Docker Machine --
 if docker-machine &> /dev/null ; then
@@ -59,6 +60,8 @@ if kubectl &> /dev/null ; then
     echo "Setting up kubectl autocomplete..."
     source <(kubectl completion zsh)
 fi
+
+export KUBE_EDITOR="vim"
 
 alias k="kubectl"
 alias kc="kubectl config"
