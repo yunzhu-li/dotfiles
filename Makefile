@@ -6,12 +6,12 @@ install:
 	@echo "Removing existing files..."
 	@rm -f "$${HOME}/.vimrc"
 	@rm -f "$${HOME}/.yl_rc"
-	@rm -f "$${HOME}/.hyper.js"
+	# @rm -f "$${HOME}/.hyper.js"
 
 	@echo "Linking dotfiles..."
 	@ln -s "$$(pwd)/vim/.vimrc" "$${HOME}"
 	@ln -s "$$(pwd)/sh/.yl_rc" "$${HOME}"
-	@ln -s "$$(pwd)/hyper/.hyper.js" "$${HOME}"
+	# @ln -s "$$(pwd)/hyper/.hyper.js" "$${HOME}"
 
 subl_macos:
 	@echo "Installing Sublime Text settings..."
