@@ -2,6 +2,7 @@
 echo "Loading yl_rc..."
 ZSH_THEME="cloud"
 export GPG_TTY=$(tty)
+export GOPATH=$HOME/go
 
 # -- Docker Machine --
 if docker-machine &> /dev/null ; then
@@ -16,7 +17,7 @@ alias lla="ls -lha"
 alias rc="source ~/.zshrc"
 alias vimrc="vim ~/.zshrc"
 alias vimyl="vim ~/.yl_rc"
-alias s="ssh iad-a1b-s0.blupig.net"
+alias s="ssh cbf-g1a-s0.blupig.net"
 
 # Mac
 alias dds="find . -name '.DS_Store' -delete"
