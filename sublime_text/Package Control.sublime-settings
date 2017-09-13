@@ -22,6 +22,7 @@
 		"SublimeLinter-pep8",
 		"Swift",
 		"Terraform",
-		"TrailingSpaces"
+		"TrailingSpaces",
+		"Varnish VCL"
 	]
 }

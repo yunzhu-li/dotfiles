@@ -4,6 +4,7 @@
 	"ensure_newline_at_eof_on_save": true,
 	"ignored_packages":
 	[
+		"Terraform",
 		"Vintage"
 	],
 	"show_full_path": true,
