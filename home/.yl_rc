@@ -14,7 +14,7 @@ fi
 # General
 alias ll="ls -lh"
 alias lla="ls -lha"
-alias rc="source ~/.zshrc"
+alias rc="exec zsh"
 alias vimrc="vim ~/.zshrc"
 alias vimyl="vim ~/.yl_rc"
 alias s="ssh cbf-g1a-s0.blupig.net"
@@ -96,4 +96,3 @@ alias ksa="kubectl get services,ingress --all-namespaces"
 alias ksec="kubectl get secrets --show-kind"
 alias ktn="kubectl top node"
 alias ktp="kubectl top pod"
-
