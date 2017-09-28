@@ -22,7 +22,10 @@ subl_macos:
 	@rm -f "$${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
 	@rm -f "$${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
 	@rm -f "$${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
-	@ln -s "$$(pwd)"/sublime_text/* "$${HOME}/Library/Application Support/Sublime Text 3/Packages/User/"
+
+	@ln -s "$$(pwd)/sublime_text/Preferences.sublime-settings" "$${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	@ln -s "$$(pwd)/sublime_text/Default (OSX).sublime-keymap" "$${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
+	@ln -s "$$(pwd)/sublime_text/Package Control.sublime-settings" "$${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
 
 zsh:
 	@echo "Installing for zsh..."
