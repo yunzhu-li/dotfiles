@@ -1,4 +1,8 @@
 {
+	"added_words":
+	[
+		"Kubernetes"
+	],
 	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
