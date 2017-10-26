@@ -18,7 +18,7 @@ alias rc="exec zsh"
 alias vimrc="vim ~/.zshrc"
 alias vimyl="vim ~/.yl_rc"
 alias s="ssh cbf-g1a-s0.blupig.net"
-alias ip="curl --http2 https://api.blupig.net/echo/ip"
+alias ip="curl https://api.blupig.net/echo/ip"
 
 # Mac
 alias dds="find . -name '.DS_Store' -delete"
