@@ -4,6 +4,15 @@ ZSH_THEME="cloud"
 export GPG_TTY=$(tty)
 export GOPATH=$HOME/go
 
+function dated_archive() {
+    if [ $# -eq 0 ]; then
+        echo "Usage: dated_archive <path>"
+        return
+    fi
+
+    tar -vcf $1_$(date "+%y%M%d_%H%M").tar $1
+}
+
 # -- Docker Machine --
 if docker-machine &> /dev/null ; then
     echo "Setting up docker-machine environment variables..."
