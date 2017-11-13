@@ -10,7 +10,7 @@ function dated_archive() {
         return
     fi
 
-    tar -vcf $1_$(date "+%y%M%d_%H%M").tar $1
+    tar -cvf $1_$(date "+%y%M%d_%H%M").tar $1
 }
 
 # -- Docker Machine --
