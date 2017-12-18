@@ -15,8 +15,10 @@ function dated_archive() {
 
 # -- Docker Machine --
 if docker-machine &> /dev/null ; then
-    echo "Setting up docker-machine environment variables..."
-    eval $(docker-machine env)
+    if [ $(docker-machine status) = "Running" ]; then
+        echo "Setting up docker-machine environment variables..."
+        eval $(docker-machine env)
+    fi
 fi
 
 # -- Aliases --
@@ -26,7 +28,6 @@ alias lla="ls -lha"
 alias rc="exec zsh"
 alias vimrc="vim ~/.zshrc"
 alias vimyl="vim ~/.yl_rc"
-alias s="ssh cbf-g1a-s0.blupig.net"
 alias ip="curl https://api.blupig.net/echo/ip"
 
 # Mac
