@@ -10,7 +10,6 @@
 		"CMakeBuilder",
 		"Dockerfile Syntax Highlighting",
 		"GitGutter",
-		"GoSublime",
 		"Handlebars",
 		"INI",
 		"Line Endings Unify",
@@ -24,6 +23,7 @@
 		"SublimeLinter-cpplint",
 		"SublimeLinter-pep8",
 		"Swift",
+		"Terraform",
 		"TrailingSpaces",
 		"Varnish VCL"
 	]
