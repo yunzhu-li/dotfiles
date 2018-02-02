@@ -1,7 +1,8 @@
 {
 	"added_words":
 	[
-		"Kubernetes"
+		"Kubernetes",
+		"backend"
 	],
 	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
 	"default_line_ending": "unix",
