@@ -10,7 +10,7 @@ function dated_archive() {
         return
     fi
 
-    tar -cvf $1_$(date "+%y%M%d_%H%M").tar $1
+    tar -cvf $1_$(date "+%y%m%d_%H%M").tar $1
 }
 
 # -- Docker Machine --
@@ -29,6 +29,7 @@ alias rc="exec zsh"
 alias vimrc="vim ~/.zshrc"
 alias vimyl="vim ~/.yl_rc"
 alias ip="curl https://api.blupig.net/echo/ip"
+alias avenv="source venv/bin/activate"
 
 # Mac
 alias dds="find . -name '.DS_Store' -delete"
