@@ -113,3 +113,11 @@ alias ksec="kubectl get secrets --show-kind"
 alias ktn="kubectl top node"
 alias ktp="kubectl top pod"
 alias kv="kubectl version -o yaml"
+
+# Vault
+alias vlogin='vault login -method=github token=$VAULT_GITHUB_TOKEN'
+alias vl="vault list"
+alias vr="vault read"
+alias vw="vault write"
+alias vs="vault status"
+
