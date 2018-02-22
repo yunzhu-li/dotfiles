@@ -2,8 +2,11 @@
 	"added_words":
 	[
 		"Kubernetes",
-		"kubernetes",
-		"backend"
+		"backend",
+		"kubectl",
+		"gcloud",
+		"plugin",
+		"stderr"
 	],
 	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
 	"default_line_ending": "unix",
