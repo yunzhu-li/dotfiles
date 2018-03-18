@@ -1,14 +1,4 @@
 {
-	"added_words":
-	[
-		"backend",
-		"gcloud",
-		"Kubernetes",
-		"kubectl",
-		"plugin",
-		"stderr"
-		"Yunzhu"
-	],
 	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,

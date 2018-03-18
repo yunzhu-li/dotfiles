@@ -6,25 +6,12 @@
 	"installed_packages":
 	[
 		"Boxy Theme",
-		"CMake",
-		"CMakeBuilder",
 		"Dockerfile Syntax Highlighting",
 		"GitGutter",
-		"Handlebars",
-		"INI",
 		"Line Endings Unify",
-		"Markdown Preview",
 		"nginx",
 		"Package Control",
-		"SCSS",
 		"SideBarEnhancements",
-		"SublimeLinter",
-		"SublimeLinter-cpplint",
-		"SublimeLinter-eslint",
-		"SublimeLinter-pep8",
-		"Swift",
-		"Terraform",
-		"TrailingSpaces",
-		"Varnish VCL"
+		"TrailingSpaces"
 	]
 }
