@@ -27,7 +27,7 @@
     "terminal.integrated.cursorStyle": "underline",
 
     // Specifies the color theme used in the workbench.
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Atom One Dark",
 
     // Controls which editor is shown at startup.
     "workbench.startupEditor": "newUntitledFile",
@@ -48,17 +48,21 @@
     "cSpell.enabled": true,
     "cSpell.language": "en",
     "cSpell.userWords": [
+        "Fastly",
         "Gomoku",
         "Kubernetes",
         "Meiyan",
         "NJIT",
+        "Terraform",
         "Yunzhu",
         "backend",
         "blupig",
         "cacheable",
         "nginx",
         "numpy",
-        "repo"
+        "nytimes",
+        "repo",
+        "repos"
     ],
     "cSpell.enabledLanguageIds": [
         "c",
