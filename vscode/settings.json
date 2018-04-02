@@ -29,6 +29,9 @@
     // Specifies the color theme used in the workbench.
     "workbench.colorTheme": "Atom One Dark",
 
+    // Specifies the icon theme used in the workbench or 'null' to not show any file icons.
+    "workbench.iconTheme": "material-icon-theme",
+
     // Controls which editor is shown at startup.
     "workbench.startupEditor": "newUntitledFile",
 
