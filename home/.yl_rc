@@ -2,7 +2,8 @@
 echo "Loading yl_rc..."
 ZSH_THEME="cloud"
 export GPG_TTY=$(tty)
-export GOPATH=$HOME/go
+export CODEPATH=${HOME}/v
+export GOPATH=${CODEPATH}/go
 
 function dated_archive() {
     if [ $# -eq 0 ]; then
@@ -120,4 +121,3 @@ alias vl="vault list"
 alias vr="vault read"
 alias vw="vault write"
 alias vs="vault status"
-

@@ -2,7 +2,6 @@ all:
 	@echo "WARNING: This will replace current configuration files."
 	@echo "To install: make [install] [vscode_macos]"
 
-
 install:
 	@echo "Removing existing files..."
 	@rm -f "$${HOME}/.yl_rc"
@@ -15,8 +14,9 @@ install:
 	@ln -s "$$(pwd)/home/gnupg/gpg.conf" "$${HOME}/.gnupg/gpg.conf"
 
 	@echo "Installing for zsh..."
-	@echo "Remove git plugin from ~/.zshrc !"
+	@echo "Remember to remove git plugin from ~/.zshrc !"
 	@grep -q -F 'source ~/.yl_rc' ~/.zshrc || echo 'source ~/.yl_rc' >> "$${HOME}/.zshrc"
+	@grep -q -F 'source ~/.yl_rc_private' ~/.zshrc || echo 'source ~/.yl_rc_private' >> "$${HOME}/.zshrc"
 
 	@echo "Done"
 

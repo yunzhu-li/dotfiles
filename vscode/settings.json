@@ -61,6 +61,7 @@
         "backend",
         "blupig",
         "cacheable",
+        "gcloud",
         "nginx",
         "numpy",
         "nytimes",
