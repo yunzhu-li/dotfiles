@@ -1,6 +1,7 @@
 # -- General --
 echo "Loading yl_rc..."
 ZSH_THEME="cloud"
+export HOMEBREW_NO_ANALYTICS=1
 export GPG_TTY=$(tty)
 export CODEPATH=${HOME}/v
 export GOPATH=${CODEPATH}/go
@@ -103,8 +104,8 @@ alias kn="kubectl get nodes --show-kind"
 alias knalloc="kubectl describe nodes | grep -A 4 \"Allocated resources:\""
 alias kns="kubectl get namespaces --show-kind"
 alias knw="kubectl get nodes --show-kind -o=wide"
-alias kp="kubectl get pods --show-kind --show-all"
-alias kpw="kubectl get pods --show-kind --show-all -o=wide"
+alias kp="kubectl get pods --show-kind"
+alias kpw="kubectl get pods --show-kind -o=wide"
 alias kpwsn="kubectl get pods --show-kind -o=wide --sort-by='.spec.nodeName'"
 alias kpx="kubectl proxy"
 alias krs="kubectl get replicasets --show-kind"

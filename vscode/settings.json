@@ -69,6 +69,7 @@
         "repos",
         "scrypt",
         "signup",
+        "tfstate",
         "urandom"
     ],
     "cSpell.enabledLanguageIds": [
