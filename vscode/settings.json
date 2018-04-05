@@ -38,10 +38,6 @@
     // Twitter feedback (smiley) in the status bar.
     "workbench.statusBar.feedback.visible": false,
 
-    // Gitlens
-    "gitlens.codeLens.enabled": false,
-    "gitlens.currentLine.enabled": false,
-
     // Python
     "python.pythonPath": "~/python_venv/bin/python3.6",
     "python.linting.enabled": true,
@@ -101,6 +97,20 @@
         "yml",
         "yaml"
     ],
+
+    // Gitlens
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
 
     // Launch configurations
     "launch": {
