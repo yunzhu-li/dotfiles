@@ -32,6 +32,7 @@ alias vimrc="vim ~/.zshrc"
 alias vimyl="vim ~/.yl_rc"
 alias ip="curl https://api.blupig.net/echo/ip"
 alias avenv="source venv/bin/activate"
+alias venv="source ~/python_venv/bin/activate"
 
 # Mac
 alias dds="find . -name '.DS_Store' -delete"
