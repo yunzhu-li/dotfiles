@@ -120,7 +120,7 @@ alias ktp="kubectl top pod"
 alias kv="kubectl version -o yaml"
 
 # Vault
-alias vlogin='vault login -method=github token=$VAULT_GITHUB_TOKEN'
+alias vlogin='vault login -method=github'
 alias vl="vault list"
 alias vr="vault read"
 alias vw="vault write"
