@@ -5,6 +5,7 @@ export HOMEBREW_NO_ANALYTICS=1
 export GPG_TTY=$(tty)
 export CODEPATH=${HOME}/v
 export GOPATH=${CODEPATH}/go
+export ANDROID_SDK_ROOT=${HOME}/android_sdk
 
 function dated_archive() {
     if [ $# -eq 0 ]; then
@@ -91,6 +92,7 @@ alias kccc="kubectl config current-context"
 alias kcgc="kubectl config get-contexts"
 alias kcsc="kubectl config set-context"
 alias kci="kubectl cluster-info"
+alias kcr="kubectl get cronjob --show-kind"
 alias kcuc="kubectl config use-context"
 alias kcm="kubectl get configmaps --show-kind"
 alias kd="kubectl get deployments --show-kind"
@@ -102,6 +104,7 @@ alias ke="kubectl exec -it"
 alias kew="kubectl get events -w"
 alias kg="kubectl get --show-kind"
 alias khpa="kubectl get horizontalpodautoscalers"
+alias kj="kubectl get jobs --show-kind"
 alias kl="kubectl logs --tail 100 -f"
 alias kn="kubectl get nodes --show-kind"
 alias knalloc="kubectl describe nodes | grep -A 4 \"Allocated resources:\""
