@@ -1,20 +1,14 @@
 # -- General --
 echo "Loading yl_rc..."
+
 ZSH_THEME="cloud"
-export HOMEBREW_NO_ANALYTICS=1
-export GPG_TTY=$(tty)
+export ANDROID_SDK_ROOT=${HOME}/android_sdk
 export CODEPATH=${HOME}/v
 export GOPATH=${CODEPATH}/go
-export ANDROID_SDK_ROOT=${HOME}/android_sdk
+export GPG_TTY=$(tty)
+export HOMEBREW_NO_ANALYTICS=1
+export KUBE_EDITOR="vim"
 
-function dated_archive() {
-    if [ $# -eq 0 ]; then
-        echo "Usage: dated_archive <path>"
-        return
-    fi
-
-    tar -cvf $1_$(date "+%y%m%d_%H%M").tar $1
-}
 
 # -- Docker Machine --
 if docker-machine &> /dev/null ; then
@@ -24,6 +18,26 @@ if docker-machine &> /dev/null ; then
     fi
 fi
 
+
+# -- kubectl autocomplete --
+if kubectl &> /dev/null ; then
+    echo "Setting up kubectl autocomplete..."
+    source <(kubectl completion zsh)
+fi
+
+
+# -- Functions --
+# tar with date in filename
+function dtar() {
+    if [ $# -eq 0 ]; then
+        echo "Usage: dtar <path>"
+        return
+    fi
+
+    tar -cvf $1_$(date "+%y%m%d_%H%M").tar $1
+}
+
+
 # -- Aliases --
 # General
 alias ll="ls -lh"
@@ -32,7 +46,6 @@ alias rc="exec zsh"
 alias vimrc="vim ~/.zshrc"
 alias vimyl="vim ~/.yl_rc"
 alias ip="curl https://api.blupig.net/echo/ip"
-alias avenv="source venv/bin/activate"
 alias venv="source ~/python_venv/bin/activate"
 
 # Mac
@@ -43,32 +56,32 @@ alias g="git"
 alias ga="dds && git add . && git status"
 alias gb="git branch"
 alias gc="git checkout"
-alias gcm="git commit -m"
 alias gca="git commit --amend"
 alias gcane="git commit --amend --no-edit"
+alias gcm="git commit -m"
 alias gd="git diff"
 alias gds="git diff --staged"
 alias gl="git log"
+alias gl1="git log --pretty --oneline"
 alias glg="git log --graph"
 alias glg1="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-alias gl1="git log --pretty --oneline"
 alias gm="git merge --ff-only"
 alias gp="git pull"
 alias gr="git reset"
 # alias grh="git reset --hard"
 # alias grhh1="git reset --hard HEAD~1"
-alias gs="git status"
-alias gss="git stash"
-alias gsp="git stash pop"
-alias grso="git remote show origin"
 alias grpo="git remote prune origin"
+alias grso="git remote show origin"
+alias gs="git status"
+alias gsp="git stash pop"
+alias gss="git stash"
 
 # Docker
 alias d="docker"
+alias de="docker exec -it"
+alias di="docker images"
 alias dp="docker pull"
 alias dps="docker ps -a"
-alias di="docker images"
-alias de="docker exec -it"
 alias drm="docker rm -v -f \$(docker ps -aq)"
 alias drmi="docker rmi \$(docker images -q)"
 alias dsp="docker system prune"
@@ -77,24 +90,17 @@ alias dmup="docker-machine start"
 alias dmdown="docker-machine stop"
 
 # K8s
-if kubectl &> /dev/null ; then
-    echo "Setting up kubectl autocomplete..."
-    source <(kubectl completion zsh)
-fi
-
-export KUBE_EDITOR="vim"
-
 alias k="kubectl"
-alias ka="kubectl get nodes,deployments,horizontalpodautoscalers,services,ingress --show-kind"
+alias ka="kubectl get nodes,deployments,horizontalpodautoscalers,services,ingress"
 alias kap="kubectl apply -f"
 alias kc="kubectl config"
 alias kccc="kubectl config current-context"
 alias kcgc="kubectl config get-contexts"
-alias kcsc="kubectl config set-context"
 alias kci="kubectl cluster-info"
-alias kcr="kubectl get cronjob --show-kind"
-alias kcuc="kubectl config use-context"
 alias kcm="kubectl get configmaps --show-kind"
+alias kcr="kubectl get cronjob --show-kind"
+alias kcsc="kubectl config set-context"
+alias kcuc="kubectl config use-context"
 alias kd="kubectl get deployments --show-kind"
 alias kda="kubectl get deployments --show-kind --all-namespaces"
 alias kdes="kubectl describe"
@@ -126,5 +132,5 @@ alias kv="kubectl version -o yaml"
 alias vlogin='vault login -method=github'
 alias vl="vault list"
 alias vr="vault read"
-alias vw="vault write"
 alias vs="vault status"
+alias vw="vault write"
