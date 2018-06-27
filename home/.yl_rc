@@ -29,12 +29,32 @@ fi
 # -- Functions --
 # tar with date in filename
 function dtar() {
-    if [ $# -eq 0 ]; then
+    if [ $# -lt 1 ]; then
         echo "Usage: dtar <path>"
         return
     fi
 
     tar -cvf $1_$(date "+%y%m%d_%H%M").tar $1
+}
+
+# Connect TLS and print info
+function tls() {
+    if [[ $# -lt 1 ]]; then
+        echo "Usage: tls <hostname>"
+        return
+    fi
+
+    if [[ $# -gt 1 ]]; then
+        if [[ $2 == "cert" ]]; then
+            openssl s_client -servername $1 -connect $1:443 </dev/null 2>&1 | openssl x509 -noout -text
+        elif [[ $2 == "chain" ]]; then
+            openssl s_client -servername $1 -connect $1:443 -showcerts </dev/null 2>&1
+        elif [[ $2 == "san" ]]; then
+            openssl s_client -servername $1 -connect $1:443 </dev/null 2>&1 | openssl x509 -noout -text | grep DNS: | sed 's/DNS://g'
+        fi
+    else
+        openssl s_client -servername $1 -connect $1:443 </dev/null 2>&1
+    fi
 }
 
 
