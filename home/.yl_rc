@@ -3,6 +3,7 @@ echo "Loading yl_rc..."
 
 ZSH_THEME="cloud"
 export ANDROID_SDK_ROOT=${HOME}/android_sdk
+export PATH=${PATH}:${ANDROID_SDK_ROOT}/platform-tools
 export CODEPATH=${HOME}/v
 export GOPATH=${CODEPATH}/go
 export GPG_TTY=$(tty)

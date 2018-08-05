@@ -11,7 +11,7 @@ install:
 	@echo "Linking dotfiles..."
 	@ln -s "$$(pwd)/home/.yl_rc" "$${HOME}/.yl_rc"
 	@ln -s "$$(pwd)/home/.vimrc" "$${HOME}/.vimrc"
-	@ln -s "$$(pwd)/home/gnupg/gpg.conf" "$${HOME}/.gnupg/gpg.conf"
+	@ln -s "$$(pwd)/home/.gnupg/gpg.conf" "$${HOME}/.gnupg/gpg.conf"
 
 	@echo "Installing for zsh..."
 	@echo "Remember to remove git plugin from ~/.zshrc !"
