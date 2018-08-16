@@ -27,7 +27,7 @@
     "terminal.integrated.cursorStyle": "underline",
 
     // Specifies the color theme used in the workbench.
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Default Light+",
 
     // Specifies the icon theme used in the workbench or 'null' to not show any file icons.
     "workbench.iconTheme": "material-icon-theme",
@@ -39,7 +39,7 @@
     "workbench.statusBar.feedback.visible": false,
 
     // Python
-    "python.pythonPath": "~/python_venv/bin/python3.6",
+    "python.pythonPath": "~/python_venv/bin/python3",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
 
@@ -60,6 +60,7 @@
         "gcloud",
         "nginx",
         "numpy",
+        "nyhq",
         "nytimes",
         "repo",
         "repos",
@@ -98,20 +99,6 @@
         "yaml"
     ],
 
-    // Gitlens
-    "gitlens.codeLens.enabled": false,
-    "gitlens.currentLine.enabled": false,
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": false,
-        "suppressShowKeyBindingsNotice": true
-    },
-
     // Launch configurations
     "launch": {
         "version": "0.2.0",
@@ -139,5 +126,20 @@
             }
         ],
         "compounds": []
+    },
+
+    // Gitlens
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.historyExplorer.enabled": true,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
     },
 }
