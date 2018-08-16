@@ -1,49 +1,23 @@
 {
-    // Controls if the diff editor shows changes in leading or trailing whitespace as diffs
     "diffEditor.ignoreTrimWhitespace": false,
-
-    // Controls how the editor should render whitespace characters, possibilities are 'none', 'boundary', and 'all'. The 'boundary' option does not render single spaces between words.
     "editor.renderWhitespace": "boundary",
-
-    // Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers. No rulers are drawn if array is empty
     "editor.rulers": [120],
-
-    // When enabled, insert a final new line at the end of the file when saving it.
+    "extensions.ignoreRecommendations": true,
     "files.insertFinalNewline": true,
-
-    // When enabled, will trim all new lines after the final new line at the end of the file when saving it.
     "files.trimFinalNewlines": true,
-
-    // When enabled, will trim trailing whitespace when saving a file.
     "files.trimTrailingWhitespace": true,
-
-    // Enable usage data and errors to be sent to Microsoft.
     "telemetry.enableTelemetry": false,
-
-    // Controls whether the terminal cursor blinks.
     "terminal.integrated.cursorBlinking": true,
-
-    // Controls the style of terminal cursor.
     "terminal.integrated.cursorStyle": "underline",
-
-    // Specifies the color theme used in the workbench.
     "workbench.colorTheme": "Default Light+",
-
-    // Specifies the icon theme used in the workbench or 'null' to not show any file icons.
     "workbench.iconTheme": "material-icon-theme",
-
-    // Controls which editor is shown at startup.
     "workbench.startupEditor": "newUntitledFile",
-
-    // Twitter feedback (smiley) in the status bar.
     "workbench.statusBar.feedback.visible": false,
 
-    // Python
     "python.pythonPath": "~/python_venv/bin/python3",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
 
-    // cSpell
     "cSpell.enabled": true,
     "cSpell.language": "en",
     "cSpell.userWords": [
@@ -99,7 +73,6 @@
         "yaml"
     ],
 
-    // Launch configurations
     "launch": {
         "version": "0.2.0",
         "configurations": [
@@ -128,7 +101,6 @@
         "compounds": []
     },
 
-    // Gitlens
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.historyExplorer.enabled": true,
