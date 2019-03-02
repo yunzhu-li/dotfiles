@@ -21,17 +21,20 @@
     "cSpell.enabled": true,
     "cSpell.language": "en",
     "cSpell.userWords": [
+        "Callout",
         "Fastly",
         "Gomoku",
         "Kubernetes",
         "Meiyan",
         "NJIT",
+        "Shippo",
         "Terraform",
         "Yunzhu",
         "backend",
         "blupig",
         "cacheable",
         "gcloud",
+        "gonic",
         "nginx",
         "numpy",
         "nyhq",
@@ -115,4 +118,6 @@
         "suppressResultsExplorerNotice": false,
         "suppressShowKeyBindingsNotice": true
     },
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
 }
