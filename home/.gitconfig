@@ -1,0 +1,7 @@
+[credential]
+	helper = osxkeychain
+[push]
+	default = current
+[user]
+	name = Yunzhu Li
+	email = contact@yunzhu.li

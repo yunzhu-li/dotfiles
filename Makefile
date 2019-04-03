@@ -5,16 +5,17 @@ all:
 install:
 	@echo "Removing existing files..."
 	@rm -f "$${HOME}/.yl_rc"
+	@rm -f "$${HOME}/.gitconfig"
 	@rm -f "$${HOME}/.vimrc"
 	@rm -f "$${HOME}/.gnupg/gpg.conf"
 
 	@echo "Linking dotfiles..."
 	@ln -s "$$(pwd)/home/.yl_rc" "$${HOME}/.yl_rc"
+	@ln -s "$$(pwd)/home/.gitconfig" "$${HOME}/.gitconfig"
 	@ln -s "$$(pwd)/home/.vimrc" "$${HOME}/.vimrc"
 	@ln -s "$$(pwd)/home/.gnupg/gpg.conf" "$${HOME}/.gnupg/gpg.conf"
 
 	@echo "Installing for zsh..."
-	@echo "Remember to remove git plugin from ~/.zshrc !"
 	@grep -q -F 'source ~/.yl_rc' ~/.zshrc || echo 'source ~/.yl_rc' >> "$${HOME}/.zshrc"
 	@grep -q -F 'source ~/.yl_rc_private' ~/.zshrc || echo 'source ~/.yl_rc_private' >> "$${HOME}/.zshrc"
 

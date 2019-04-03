@@ -1,5 +1,0 @@
-{
-    "parser": "github",
-    "build_action": "browser",
-    "github_oauth_token": "secret"
-}

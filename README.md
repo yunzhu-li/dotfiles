@@ -2,5 +2,5 @@
 
 To install:
 ```
-make install [subl_macos]
+make [install] [vscode_macos]
 ```
