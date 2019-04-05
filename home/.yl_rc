@@ -11,16 +11,6 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_GITHUB_API_TOKEN=${GITHUB_TOKEN_PUBLIC}
 export KUBE_EDITOR="vim"
 
-
-# -- Docker Machine --
-if docker-machine &> /dev/null ; then
-    if [ $(docker-machine status) = "Running" ]; then
-        echo "Setting up docker-machine environment variables..."
-        eval $(docker-machine env)
-    fi
-fi
-
-
 # -- kubectl autocomplete --
 if kubectl &> /dev/null ; then
     echo "Setting up kubectl autocomplete..."
@@ -108,9 +98,6 @@ alias dps="docker ps -a"
 alias drm="docker rm -v -f \$(docker ps -aq)"
 alias drmi="docker rmi \$(docker images -q)"
 alias dsp="docker system prune"
-alias dm="docker-machine"
-alias dmup="docker-machine start"
-alias dmdown="docker-machine stop"
 
 # K8s
 alias k="kubectl"
