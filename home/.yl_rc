@@ -11,12 +11,15 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_GITHUB_API_TOKEN=${GITHUB_TOKEN_PUBLIC}
 export KUBE_EDITOR="vim"
 
-# -- kubectl autocomplete --
-if kubectl &> /dev/null ; then
-    echo "Setting up kubectl autocomplete..."
-    source <(kubectl completion zsh)
-fi
-
+# -- kubectl autocomplete (lazy load) --
+function kubectl() {
+    if ! type __start_kubectl >/dev/null 2>&1; then
+        echo -n "Setting up kubectl autocomplete..."
+        source <(command kubectl completion zsh)
+        echo "done"
+    fi
+    command kubectl "$@"
+}
 
 # -- Functions --
 # tar with date in filename
@@ -60,6 +63,7 @@ alias vimyl="vim ~/.yl_rc"
 alias ip="curl https://api.blupig.net/echo/ip"
 alias venv="source ~/python_venv/bin/activate"
 alias cv="curl -v -s -o /dev/null"
+alias restartbluetooth="blueutil --power 0 && sleep 5 && blueutil --power 1"
 
 # Mac
 alias dds="find . -name '.DS_Store' -delete"
