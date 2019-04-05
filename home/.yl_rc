@@ -11,20 +11,10 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_GITHUB_API_TOKEN=${GITHUB_TOKEN_PUBLIC}
 export KUBE_EDITOR="vim"
 
-# -- kubectl autocomplete (lazy load) --
-function kubectl() {
-    if ! type __start_kubectl >/dev/null 2>&1; then
-        echo -n "Setting up kubectl autocomplete..."
-        source <(command kubectl completion zsh)
-        echo "done"
-    fi
-    command kubectl "$@"
-}
-
 # -- Functions --
 # tar with date in filename
 function dtar() {
-    if [ $# -lt 1 ]; then
+    if [[ $# -lt 1 ]]; then
         echo "Usage: dtar <path>"
         return
     fi
@@ -51,7 +41,6 @@ function tls() {
         openssl s_client -servername $1 -connect $1:443 </dev/null 2>&1
     fi
 }
-
 
 # -- Aliases --
 # General
@@ -102,8 +91,19 @@ alias dps="docker ps -a"
 alias drm="docker rm -v -f \$(docker ps -aq)"
 alias drmi="docker rmi \$(docker images -q)"
 alias dsp="docker system prune"
+alias linux="docker run -it --rm ubuntu"
 
 # K8s
+# -- kubectl autocomplete (lazy load) --
+function kubectl() {
+    if ! type __start_kubectl > /dev/null 2>&1; then
+        echo -n "Setting up kubectl autocomplete..."
+        source <(command kubectl completion zsh)
+        echo "done"
+    fi
+    command kubectl "$@"
+}
+
 alias k="kubectl"
 alias ka="kubectl get nodes,deployments,horizontalpodautoscalers,services,ingress"
 alias kap="kubectl apply -f"
