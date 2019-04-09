@@ -44,18 +44,17 @@ function tls() {
 
 # -- Aliases --
 # General
+alias cv="curl -v -s -o /dev/null"
+alias dds="find . -name '.DS_Store' -delete"
+alias goblupig="cd $GOPATH/src/github.com/blupig"
+alias ip="curl https://api.blupig.net/echo/ip"
 alias ll="ls -lh"
 alias lla="ls -lha"
 alias rc="exec zsh"
+alias restartbluetooth="blueutil --power 0 && sleep 5 && blueutil --power 1"
 alias vimrc="vim ~/.zshrc"
 alias vimyl="vim ~/.yl_rc"
-alias ip="curl https://api.blupig.net/echo/ip"
 alias venv="source ~/python_venv/bin/activate"
-alias cv="curl -v -s -o /dev/null"
-alias restartbluetooth="blueutil --power 0 && sleep 5 && blueutil --power 1"
-
-# Mac
-alias dds="find . -name '.DS_Store' -delete"
 
 # Git
 alias g="git"
