@@ -11,6 +11,14 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_GITHUB_API_TOKEN=${GITHUB_TOKEN_PUBLIC}
 export KUBE_EDITOR="vim"
 
+# -- SHELL --
+# Assume bash
+export SHELL_NAME="bash"
+if [[ -n "$ZSH_VERSION" ]]; then
+    # zsh
+    SHELL_NAME="zsh"
+fi
+
 # -- Functions --
 # tar with date in filename
 function dtar() {
@@ -50,7 +58,7 @@ alias goblupig="cd $GOPATH/src/github.com/blupig"
 alias ip="curl https://api.blupig.net/echo/ip"
 alias ll="ls -lh"
 alias lla="ls -lha"
-alias rc="exec zsh"
+alias rc="exec ${SHELL_NAME}"
 alias restartbluetooth="blueutil --power 0 && sleep 5 && blueutil --power 1"
 alias vimrc="vim ~/.zshrc"
 alias vimyl="vim ~/.yl_rc"
@@ -97,7 +105,7 @@ alias linux="docker run -it --rm ubuntu"
 function kubectl() {
     if ! type __start_kubectl > /dev/null 2>&1; then
         echo -n "Setting up kubectl autocomplete..."
-        source <(command kubectl completion zsh)
+        source <(command kubectl completion ${SHELL_NAME})
         echo "done"
     fi
     command kubectl "$@"
@@ -125,6 +133,7 @@ alias kg="kubectl get --show-kind"
 alias khpa="kubectl get horizontalpodautoscalers"
 alias kj="kubectl get jobs --show-kind"
 alias kl="kubectl logs --tail 100 -f"
+alias kmc="kubectl get managedcertificates --show-kind"
 alias kn="kubectl get nodes --show-kind"
 alias knalloc="kubectl describe nodes | grep -A 5 \"Allocated resources:\""
 alias kns="kubectl get namespaces --show-kind"

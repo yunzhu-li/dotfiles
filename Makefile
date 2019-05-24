@@ -9,13 +9,17 @@ install:
 	@rm -f "$${HOME}/.vimrc"
 	@rm -f "$${HOME}/.gnupg/gpg.conf"
 
+	@mkdir -p "$${HOME}/.gnupg/gpg.conf"
+
 	@echo "Linking dotfiles..."
 	@ln -s "$$(pwd)/home/.yl_rc" "$${HOME}/.yl_rc"
 	@ln -s "$$(pwd)/home/.gitconfig" "$${HOME}/.gitconfig"
 	@ln -s "$$(pwd)/home/.vimrc" "$${HOME}/.vimrc"
 	@ln -s "$$(pwd)/home/.gnupg/gpg.conf" "$${HOME}/.gnupg/gpg.conf"
 
-	@echo "Installing for zsh..."
+	@echo "Installing for bash and zsh..."
+	@grep -q -F 'source ~/.yl_rc' ~/.bashrc || echo 'source ~/.yl_rc' >> "$${HOME}/.bashrc"
+	@grep -q -F 'source ~/.yl_rc_private' ~/.bashrc || echo 'source ~/.yl_rc_private' >> "$${HOME}/.bashrc"
 	@grep -q -F 'source ~/.yl_rc' ~/.zshrc || echo 'source ~/.yl_rc' >> "$${HOME}/.zshrc"
 	@grep -q -F 'source ~/.yl_rc_private' ~/.zshrc || echo 'source ~/.yl_rc_private' >> "$${HOME}/.zshrc"
 
