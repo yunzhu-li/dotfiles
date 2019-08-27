@@ -10,7 +10,7 @@ install:
 	@rm -f "$${HOME}/.vimrc"
 	@rm -f "$${HOME}/.yl_rc"
 
-	@mkdir -p "$${HOME}/.gnupg/gpg.conf"
+	@mkdir -p "$${HOME}/.gnupg"
 
 	@echo "Linking dotfiles..."
 	@ln -s "$$(pwd)/home/.gitconfig" "$${HOME}/.gitconfig"
