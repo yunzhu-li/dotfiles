@@ -3,7 +3,7 @@
     "version": 1,
     "hterm": {
         "default": {
-            "background-color": "rgba(34, 57, 67, 1)",
+            "background-color": "rgba(34, 34, 34, 1)",
             "cursor-blink": true,
             "cursor-blink-cycle": [
                 500,
