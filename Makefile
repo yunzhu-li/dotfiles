@@ -4,18 +4,20 @@ all:
 
 install:
 	@echo "Removing existing files..."
-	@rm -f "$${HOME}/.yl_rc"
 	@rm -f "$${HOME}/.gitconfig"
-	@rm -f "$${HOME}/.vimrc"
 	@rm -f "$${HOME}/.gnupg/gpg.conf"
+	@rm -f "$${HOME}/.tmux.conf"
+	@rm -f "$${HOME}/.vimrc"
+	@rm -f "$${HOME}/.yl_rc"
 
 	@mkdir -p "$${HOME}/.gnupg/gpg.conf"
 
 	@echo "Linking dotfiles..."
-	@ln -s "$$(pwd)/home/.yl_rc" "$${HOME}/.yl_rc"
 	@ln -s "$$(pwd)/home/.gitconfig" "$${HOME}/.gitconfig"
-	@ln -s "$$(pwd)/home/.vimrc" "$${HOME}/.vimrc"
 	@ln -s "$$(pwd)/home/.gnupg/gpg.conf" "$${HOME}/.gnupg/gpg.conf"
+	@ln -s "$$(pwd)/home/.tmux.conf" "$${HOME}/.tmux.conf"
+	@ln -s "$$(pwd)/home/.vimrc" "$${HOME}/.vimrc"
+	@ln -s "$$(pwd)/home/.yl_rc" "$${HOME}/.yl_rc"
 
 	@echo "Installing for bash and zsh..."
 	@grep -q -F 'source ~/.yl_rc' ~/.bashrc || echo 'source ~/.yl_rc' >> "$${HOME}/.bashrc"
