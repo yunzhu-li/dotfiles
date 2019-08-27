@@ -1,0 +1,19 @@
+{
+    "magic": "nassh-prefs",
+    "version": 1,
+    "hterm": {
+        "default": {
+            "background-color": "rgba(34, 57, 67, 1)",
+            "cursor-blink": true,
+            "cursor-blink-cycle": [
+                500,
+                500
+            ],
+            "cursor-color": "rgba(238, 238, 238, 0.75)",
+            "font-family": "\"Monaco\", \"DejaVu Sans Mono\", \"Noto Sans Mono\", \"Everson Mono\", FreeMono, Menlo, Terminal, monospace",
+            "font-size": "13",
+            "foreground-color": "rgba(238, 238, 238, 1)",
+            "mouse-right-click-paste": false
+        }
+    }
+}
