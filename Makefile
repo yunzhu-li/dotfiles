@@ -4,6 +4,7 @@ all:
 
 install:
 	@echo "Removing existing files..."
+	@rm -f "$${HOME}/.config/terminator/config"
 	@rm -f "$${HOME}/.gitconfig"
 	@rm -f "$${HOME}/.gnupg/gpg.conf"
 	@rm -f "$${HOME}/.tmux.conf"
@@ -11,8 +12,10 @@ install:
 	@rm -f "$${HOME}/.yl_rc"
 
 	@mkdir -p "$${HOME}/.gnupg"
+	@mkdir -p "$${HOME}/.config/terminator"
 
-	@echo "Linking dotfiles..."
+	@echo "Linking files..."
+	@ln -s "$$(pwd)/home/.config/terminator/config" "$${HOME}/.config/terminator/config"
 	@ln -s "$$(pwd)/home/.gitconfig" "$${HOME}/.gitconfig"
 	@ln -s "$$(pwd)/home/.gnupg/gpg.conf" "$${HOME}/.gnupg/gpg.conf"
 	@ln -s "$$(pwd)/home/.tmux.conf" "$${HOME}/.tmux.conf"
