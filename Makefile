@@ -4,6 +4,7 @@ all:
 
 install:
 	@echo "Removing existing files..."
+	@rm -f "$${HOME}/.config/conky/conky.conf"
 	@rm -f "$${HOME}/.config/terminator/config"
 	@rm -f "$${HOME}/.gitconfig"
 	@rm -f "$${HOME}/.gnupg/gpg.conf"
@@ -12,9 +13,11 @@ install:
 	@rm -f "$${HOME}/.yl_rc"
 
 	@mkdir -p "$${HOME}/.gnupg"
+	@mkdir -p "$${HOME}/.config/conky"
 	@mkdir -p "$${HOME}/.config/terminator"
 
 	@echo "Linking files..."
+	@ln -s "$$(pwd)/home/.config/conky/conky.conf" "$${HOME}/.config/conky/conky.conf"
 	@ln -s "$$(pwd)/home/.config/terminator/config" "$${HOME}/.config/terminator/config"
 	@ln -s "$$(pwd)/home/.gitconfig" "$${HOME}/.gitconfig"
 	@ln -s "$$(pwd)/home/.gnupg/gpg.conf" "$${HOME}/.gnupg/gpg.conf"
