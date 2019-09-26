@@ -26,10 +26,8 @@ install:
 	@ln -s "$$(pwd)/home/.yl_rc" "$${HOME}/.yl_rc"
 
 	@echo "Installing for bash and zsh..."
-	@grep -q -F 'source ~/.yl_rc' ~/.bashrc || echo 'source ~/.yl_rc' >> "$${HOME}/.bashrc"
-	@grep -q -F 'source ~/.yl_rc_local' ~/.bashrc || echo 'source ~/.yl_rc_local' >> "$${HOME}/.bashrc"
-	@grep -q -F 'source ~/.yl_rc' ~/.zshrc || echo 'source ~/.yl_rc' >> "$${HOME}/.zshrc"
-	@grep -q -F 'source ~/.yl_rc_local' ~/.zshrc || echo 'source ~/.yl_rc_local' >> "$${HOME}/.zshrc"
+	@grep -q -F 'source ~/.yl_rc' ~/.bashrc || printf 'source ~/.yl_rc_local\nsource ~/.yl_rc\n' >> "$${HOME}/.bashrc"
+	@grep -q -F 'source ~/.yl_rc' ~/.zshrc || printf 'source ~/.yl_rc_local\nsource ~/.yl_rc\n' >> "$${HOME}/.zshrc"
 
 	@echo "Done"
 
