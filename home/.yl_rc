@@ -33,7 +33,7 @@ function dtar() {
 # Connect TLS and print info
 function tls() {
     if [[ $# -lt 1 ]]; then
-        echo "Usage: tls <hostname>"
+        echo "Show TLS server information.\nUsage: tls <hostname>"
         return
     fi
 
@@ -48,6 +48,18 @@ function tls() {
     else
         openssl s_client -servername $1 -connect $1:443 </dev/null 2>&1
     fi
+}
+
+# Verify macOS app code signature
+# https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/RequirementLang/RequirementLang.html#//apple_ref/doc/uid/TP40005929-CH5-SW22
+function vcs() {
+    if [[ $# -lt 1 ]]; then
+        echo "Verifies code signature with an Apple-issued certificate.\nUsage: vcs <path_to_application>"
+        return
+    fi
+
+    codesign --display --verbose=2 $1
+    codesign --verify --verbose -R="anchor apple generic" $1
 }
 
 # -- Aliases --
