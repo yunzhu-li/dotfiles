@@ -1,22 +1,25 @@
 {
     "diffEditor.ignoreTrimWhitespace": false,
+
+    "editor.largeFileOptimizations": true,
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [120],
     "extensions.ignoreRecommendations": true,
+
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+
     "telemetry.enableTelemetry": false,
+
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "underline",
-    "workbench.colorTheme": "Default Light+",
+
+    "window.zoomLevel": 0,
+    "window.autoDetectColorScheme": true,
+
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.statusBar.feedback.visible": false,
-
-    "python.pythonPath": "~/python_venv/bin/python3",
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
 
     "cSpell.enabled": true,
     "cSpell.language": "en",
@@ -24,6 +27,7 @@
         "Callout",
         "Fastly",
         "Gomoku",
+        "IAPs",
         "Kubernetes",
         "Meiyan",
         "NJIT",
@@ -43,6 +47,7 @@
         "repo",
         "repos",
         "scrypt",
+        "signin",
         "signup",
         "tfstate",
         "urandom"
@@ -77,49 +82,9 @@
         "yaml"
     ],
 
-    "launch": {
-        "version": "0.2.0",
-        "configurations": [
-            {
-                "type": "python",
-                "request": "launch",
-                "name": "Python: Launch",
-                "program": "${file}",
-                "pythonPath": "${config:python.pythonPath}",
-                "stopOnEntry": false,
-            },
-            {
-                "type": "node",
-                "request": "launch",
-                "name": "Node: Launch",
-                "program": "${file}"
-            },
-            {
-                "type": "go",
-                "request": "launch",
-                "name": "Go: Launch",
-                "program": "${file}",
-                "mode": "debug",
-            }
-        ],
-        "compounds": []
-    },
-
     "gitlens.codeLens.enabled": false,
-    "gitlens.currentLine.enabled": false,
-    "gitlens.historyExplorer.enabled": true,
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": false,
-        "suppressShowKeyBindingsNotice": true
-    },
-    "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true,
 
+    "go.buildOnSave": "off",
     "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
 }
