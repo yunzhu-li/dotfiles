@@ -1,6 +1,6 @@
 all:
 	@echo "WARNING: This will replace current configuration files."
-	@echo "To install: make [install] [vscode_macos]"
+	@echo "To install: make install"
 
 install:
 	@echo "Removing existing files..."
@@ -29,13 +29,4 @@ install:
 	@grep -q -F 'source ~/.yl_rc' ~/.bashrc || printf 'source ~/.yl_rc_local\nsource ~/.yl_rc\n' >> "$${HOME}/.bashrc"
 	@grep -q -F 'source ~/.yl_rc' ~/.zshrc || printf 'source ~/.yl_rc_local\nsource ~/.yl_rc\n' >> "$${HOME}/.zshrc"
 
-	@echo "Done"
-
-vscode_settings_dir=$${HOME}/Library/Application Support/Code/User
-vscode_macos:
-	@echo "Installing VSCode files..."
-	@rm -f "$(vscode_settings_dir)/settings.json"
-	@rm -f "$(vscode_settings_dir)/keybindings.json"
-	@ln -s "$$(pwd)/vscode/settings.json" "$(vscode_settings_dir)/"
-	@ln -s "$$(pwd)/vscode/keybindings.json" "$(vscode_settings_dir)/"
 	@echo "Done"
