@@ -118,10 +118,11 @@ alias linux="docker run -it --rm ubuntu"
 # K8s
 # -- kubectl autocomplete (lazy load) --
 function kubectl() {
-    if ! type __start_kubectl > /dev/null 2>&1; then
+    if [[ -z $KUBECTL_AUTOCOMPLETE ]]; then
         echo -n "Setting up kubectl autocomplete..."
         source <(command kubectl completion ${SHELL_NAME})
         echo "done"
+        KUBECTL_AUTOCOMPLETE=1
     fi
     command kubectl "$@"
 }
