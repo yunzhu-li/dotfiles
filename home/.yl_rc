@@ -28,7 +28,17 @@ function dtar() {
         return
     fi
 
-    tar -cvf $1_$(date "+%y%m%d_%H%M").tar $1
+    tar -cvf $1_$(date "+%Y%m%d_%H%M").tar $1
+}
+
+# zip with date in filename
+function dzip() {
+    if [[ $# -lt 1 ]]; then
+        echo "Usage: dzip <path>"
+        return
+    fi
+
+    zip -ro $1_$(date "+%Y%m%d_%H%M").zip $1
 }
 
 # Connect TLS and print info
