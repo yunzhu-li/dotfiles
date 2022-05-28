@@ -9,7 +9,8 @@ export GOPATH=${HOME}/go
 export GPG_TTY=$(tty)
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_GITHUB_API_TOKEN=${GITHUB_TOKEN_PUBLIC}
-export KUBE_EDITOR="vim"
+export KUBE_EDITOR='vim'
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # -- SHELL --
 # Assume bash
