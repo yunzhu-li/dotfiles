@@ -118,6 +118,7 @@ alias gri="git rebase -i"
 alias grpo="git remote prune origin"
 alias grso="git remote show origin"
 alias gs="git status"
+alias gsl="git stash list"
 alias gsp="git stash pop"
 alias gss="git stash"
 
